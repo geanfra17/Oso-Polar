@@ -1,0 +1,39 @@
+$(document).ready(function(){
+    $("#fondo-1").mouseenter(function(){
+        $("#fase-1").removeClass("d-none");
+    });
+    $("#fondo-1").mouseleave(function(){
+        $("#fase-1").addClass("d-none");
+        $("#fase-2").addClass("d-none");
+        $("#fase-3").addClass("d-none");
+        $("#fase-4").addClass("d-none");
+    });
+   $("#fase-1").hover(function(){
+        $("#oso-fondo").toggleClass("imagen-oso-15-efecto");
+   });
+   $("#fase-2").hover(function(){
+        $("#oso-fondo").toggleClass("imagen-oso-15-efecto");
+    });
+    $("#fase-3").hover(function(){
+        $("#oso-fondo").toggleClass("imagen-oso-15-efecto");
+    });
+    $("#fase-4").hover(function(){
+        $("#oso-fondo").toggleClass("imagen-oso-15-efecto");
+    });
+    
+   $("#siguiente-1").click(function(){
+        $("#fase-1").hide();
+        $("#fase-2").fadeIn(200);
+        $("#fase-2").removeClass("d-none");
+   })
+   $("#siguiente-2").click(function(){
+        $("#fase-2").hide();
+        $("#fase-3").fadeIn(200);
+        $("#fase-3").removeClass("d-none");
+    })
+    $("#siguiente-3").click(function(){
+        $("#fase-3").hide();
+        $("#fase-4").fadeIn(200);
+        $("#fase-4").removeClass("d-none");
+    })
+})
